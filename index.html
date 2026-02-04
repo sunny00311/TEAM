@@ -1,1 +1,97 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Members</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .card {
+      max-width: 900px;
+      background: #ffffff;
+      padding: 25px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .content {
+      margin-top: 20px;
+      line-height: 1.7;
+      color: #444;
+      white-space: pre-line;
+      background: #f9fafb;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>TEAM MEMBERS</h1>
+
+    <div class="content" id="teamData">
+1-29-2026 16:54:36
+Email: sunnysahani003@gmail.com
+Team Name: Team Innovators 2.5
+Leader: Sunny Sahni
+Leader Email: SUNNYSAHANI003@GMAIL.COM
+
+Members:
+- Swati Yadav
+- Deepanshu
+- Md Danish
+- Priyanshu
+
+Member Emails:
+- swaatiyadav03@gmail.com
+- deepanshu2629@gmail.com
+- mddanish84478@gmail.com
+- abc606257@gmail.com
+
+Campus: GND DSEU Campus
+Project: INVESTMATE - AI FOR BUSINESS
+    </div>
+
+    <button onclick="copyText()">📋 Copy Details</button>
+  </div>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("teamData").innerText;
+      navigator.clipboard.writeText(text);
+      alert("Team details copied!");
+    }
+  </script>
+
+</body>
+</html>
