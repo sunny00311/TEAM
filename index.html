@@ -1,110 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Team Members</title>
+    <meta charset="UTF-8">
+    <title>Offline AI App Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    padding: 30px;
-  }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
 
-  .card {
-    max-width: 900px;
-    background: #ffffff;
-    padding: 25px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
+        header {
+            background: #111827;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-  h1 {
-    text-align: center;
-  }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-  .field {
-    background: #f9fafb;
-    border: 1px solid #ddd;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+        h1 {
+            margin-bottom: 10px;
+        }
 
-  .field span {
-    white-space: pre-line;
-  }
+        .problem-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            line-height: 1.6;
+        }
 
-  .copy-btn {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+        .video-container {
+            margin-top: 30px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
 
-  .copy-btn:hover {
-    background: #1e40af;
-  }
-</style>
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111827;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="card">
-  <h1>TEAM MEMBERS</h1>
+<header>
+    <h1>Offline AI Assistant</h1>
+    <p>Privacy-First • Fully Offline • On-Device AI</p>
+</header>
 
-  <div class="field">
-    <span id="date">1-29-2026 16:54:36</span>
-    <button class="copy-btn" onclick="copyText('date')">Copy</button>
-  </div>
+<section>
+    <h2>Problem Statement</h2>
 
-  <div class="field">
-    <span id="email">Email: sunnysahani003@gmail.com</span>
-    <button class="copy-btn" onclick="copyText('email')">Copy</button>
-  </div>
+    <div class="problem-box">
+        <p>
+            Most AI apps today depend on the internet and cloud servers, which can risk user privacy 
+            and stop working offline.
+        </p>
 
-  <div class="field">
-    <span id="team">Team Name: Team Innovators 2.5</span>
-    <button class="copy-btn" onclick="copyText('team')">Copy</button>
-  </div>
+        <p>
+            Our solution is an Android app that runs AI completely on the device using a local LLM 
+            and RAG pipeline. It stores documents locally, finds relevant information using vector 
+            embeddings, and generates answers without sending any data to the cloud.
+        </p>
 
-  <div class="field">
-    <span id="leader">Leader: Sunny Sahni</span>
-    <button class="copy-btn" onclick="copyText('leader')">Copy</button>
-  </div>
+        <p>
+            This ensures privacy, fast responses, and full offline functionality.
+        </p>
+    </div>
 
-  <div class="field">
-    <span id="members">
-Members:
-- Swati Yadav
-- Deepanshu
-- Md Danish
-- Priyanshu
-    </span>
-    <button class="copy-btn" onclick="copyText('members')">Copy</button>
-  </div>
+    <h2 style="margin-top: 50px;">Demo Video</h2>
 
-  <div class="field">
-    <span id="project">Project: INVESTMATE - AI FOR BUSINESS</span>
-    <button class="copy-btn" onclick="copyText('project')">Copy</button>
-  </div>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
 
-</div>
-
-<script>
-function copyText(id) {
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text)
-    .then(() => alert("Copied!"))
-    .catch(err => console.error("Copy failed:", err));
-}
-</script>
+<footer>
+    © 2026 Offline AI Project | Built with On-Device LLM + RAG
+</footer>
 
 </body>
 </html>
